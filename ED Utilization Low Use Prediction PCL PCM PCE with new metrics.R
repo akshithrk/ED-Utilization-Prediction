@@ -25,7 +25,7 @@ EDLowusePC_cy2017.df <- read.xlsx("High ED Primary Care WC Low Resources  2016 &
 # Fit model
 
 ## Select from the full dataset just the variables to try fitting.
-
+colnames(EDLowusePC_cy2016.df)
 EDPredictorsLowusePC.2016.df <- select(EDLowusePC_cy2016.df, High.ED.Utilization.Indicator, Age.Group:Viral.Infection.of.Unspecified.Site.DX, Gender, Major.Region, Race.and.Ethnicity.Group, ED.Shift,Season)
 
 ## Fit a logistic regression model with all of the initial set of selected variables
