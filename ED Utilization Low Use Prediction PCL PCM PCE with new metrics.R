@@ -16,8 +16,8 @@ library(logistf)#to find 0,1 error, not used
 # set working directory
 setwd("J:/Ashley/ED Utilization Prediction")
 
-# 2016 ED Utilization for Training
-EDLowusePC_cy2016.df <- read.xlsx("High ED Primary Care WC Low Resources 2015 & 2016 in 2016 for Training.xlsx")
+# 2016 & 2015 ED Utilization for Training
+EDLowusePC_cy2016.df <- read.xlsx("High ED Primary Care WC Low Resources for 2015 & 2016 for Training.xlsx")
 
 # Validation data set
 EDLowusePC_cy2017.df <- read.xlsx("High ED Primary Care WC Low Resources  2016 & 2017 in 2017 for Validation.xlsx")
