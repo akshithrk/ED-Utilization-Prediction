@@ -22,7 +22,7 @@ EDLowusePC_cy2016.df <- read.xlsx("High ED Primary Care WC Low Resources 2015 & 
 # Validation data set
 EDLowusePC_cy2017.df <- read.xlsx("High ED Primary Care WC Low Resources  2016 & 2017 in 2017 for Validation.xlsx")
 
-# Fit model: ch4ecking for colnames to include important metrics in the select below
+# Fit model: ch4ecking for colnames to include important metrics in the select below 
 colnames(EDLowusePC_cy2016.df)
 ## Select from the full dataset just the variables to try fitting.
 EDPredictorsLowusePC.2016.df <- select(EDLowusePC_cy2016.df, High.ED.Utilization.Indicator, Age.Group:Viral.Infection.of.Unspecified.Site.DX, Gender, Major.Region, Race.and.Ethnicity.Group, ED.Shift,Season)
