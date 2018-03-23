@@ -25,7 +25,7 @@ EDLowusePC_cy2017.df <- read.xlsx("High ED Primary Care WC Low Resources  2016 &
 # Fit model: ch4ecking for colnames to include important metrics in the select below 
 colnames(EDLowusePC_cy2016.df)
 ## Select from the full dataset just the variables to try fitting.
-EDPredictorsLowusePC.2016.df <- select(EDLowusePC_cy2016.df, High.ED.Utilization.Indicator, Age.Group:Viral.Infection.of.Unspecified.Site.DX, Gender, Major.Region, Race.and.Ethnicity.Group, ED.Shift,Season)
+EDPredictorsLowusePC.2016.df <- select(EDLowusePC_cy2016.df, Premature.Birth.DX, Epilepsy.DX, Developmental.Disorders.DX, Asthma.DX, ADHD.DX, Intellectual.Disability.DX, Dislocation.DX, Chronic.Group.DX, Allergics.Group.DX, Atopic.Dermatitis.DX, Hyper.Tension.DX, Diabetes.DX, Cerebral.Palsy.DX, Allergic.Rhinitis.DX, Trauma.Group.DX, Fractures.DX, Developmental.Disorders.Group.DX, Cardiovascular.Disorders.DX, Allergic.Conjunctivitis.DX, High.ED.Utilization.Indicator, Age.Group:Viral.Infection.of.Unspecified.Site.DX, Gender, Major.Region, Race.and.Ethnicity.Group, ED.Shift,Season)
 
 ## Fit a logistic regression model with all of the initial set of selected variables
 EDPredictorsLowusePC.2016.logis <- glm(High.ED.Utilization.Indicator ~ ., family=binomial(logit), data=EDPredictorsLowusePC.2016.df)
@@ -50,7 +50,7 @@ summary(EDPredictorsLowusePC.2016.logis.steplogis)
 # save the new model
 #save(EDPredictorsLowusePC.2016.logis.steplogis, file="EDPredictorsPC.2016.logis.steplogis.Rda")
 
-EDPredictorsLowusePC.2017.df <- select(EDLowusePC_cy2017.df, High.ED.Utilization.Indicator, Age.Group:Prior.ED.Visit.Count, Gender, Major.Region, Race.and.Ethnicity.Group, ED.Shift)
+EDPredictorsLowusePC.2017.df <- select(EDLowusePC_cy2017.df, Premature.Birth.DX, Epilepsy.DX, Developmental.Disorders.DX, Asthma.DX, ADHD.DX, Intellectual.Disability.DX, Dislocation.DX, Chronic.Group.DX, Allergics.Group.DX, Atopic.Dermatitis.DX, Hyper.Tension.DX, Diabetes.DX, Cerebral.Palsy.DX, Allergic.Rhinitis.DX, Trauma.Group.DX, Fractures.DX, Developmental.Disorders.Group.DX, Cardiovascular.Disorders.DX, Allergic.Conjunctivitis.DX, High.ED.Utilization.Indicator, Age.Group:Prior.ED.Visit.Count, Gender, Major.Region, Race.and.Ethnicity.Group, ED.Shift)
 # save the 2017 validation data set
 # save(ICUPredictorsLowusePC.JanDec2017.df, file="ICUPredictorsPC.JanDec2017.df.Rda")
 
